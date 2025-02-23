@@ -13,6 +13,7 @@ namespace TestProjectFunctionCalcul
             _apply = new Apply();
         }
 
+
         [Fact]
         public void Test1()
         {
