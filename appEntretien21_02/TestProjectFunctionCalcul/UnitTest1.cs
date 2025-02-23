@@ -21,7 +21,7 @@ namespace TestProjectFunctionCalcul
             int x = 4;
 
             int result = _apply.ApplyFunction(function, x);
-*
+
             Assert.Equal(42, result);
         }
 
