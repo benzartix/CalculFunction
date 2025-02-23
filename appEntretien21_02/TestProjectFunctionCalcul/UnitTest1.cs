@@ -13,28 +13,24 @@ namespace TestProjectFunctionCalcul
             _apply = new Apply();
         }
 
+
         [Fact]
         public void Test1()
         {
-            // Arrange
             string function = "const(x)=42";
-            int x = 4; // Peu importe x, c'est une constante
+            int x = 4;
 
-            // Act
             int result = _apply.ApplyFunction(function, x);
 
-            // Assert
             Assert.Equal(42, result);
         }
 
         [Fact]
         public void Test2()
         {
-            // Arrange
             string function = "square(x)=x^2";
             int x = 4;
 
-            // Act
             int result = _apply.ApplyFunction(function, x);
 
             Assert.Equal(16, result);
@@ -43,11 +39,11 @@ namespace TestProjectFunctionCalcul
         [Fact]
         public void Test3()
         {
-            // Arrange
+
             string function = "const(x)=42";
             int x = 42;
 
-            // Act
+
             int result = _apply.ApplyFunction(function, x);
 
             Assert.Equal(x, result);
@@ -58,10 +54,8 @@ namespace TestProjectFunctionCalcul
         [InlineData("func(x)=5x^2-7", 4, 52)] 
         public void Test4(string function, int x, int expected)
         {
-            // Act
             int result = _apply.ApplyFunction(function, x);
 
-            // Assert
             Assert.Equal(expected, result);
         }
 
